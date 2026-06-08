@@ -1,0 +1,19 @@
+tasks:
+  check-tools:
+    name: Check script tools
+    command: |
+      set -euo pipefail
+
+      command -v aws
+      aws --version
+
+      command -v jq
+      jq --version
+
+      bash -n add-tcpdump-sidecar.sh
+      bash -n remove-tcpdump-sidecar.sh
+    triggeredBy:
+      - postDevcontainerStart
+      - manual
+
+services: {}

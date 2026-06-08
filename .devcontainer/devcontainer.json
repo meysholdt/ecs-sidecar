@@ -1,0 +1,7 @@
+{
+  "name": "ecs-sidecar",
+  "build": {
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  }
+}
